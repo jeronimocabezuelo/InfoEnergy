@@ -8,18 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		7458C6892C57EAA1009081BC /* InfoEnergyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6882C57EAA1009081BC /* InfoEnergyApp.swift */; };
-		7458C68B2C57EAA1009081BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C68A2C57EAA1009081BC /* ContentView.swift */; };
+		7458C68B2C57EAA1009081BC /* CoffeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C68A2C57EAA1009081BC /* CoffeView.swift */; };
 		7458C68D2C57EAA2009081BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7458C68C2C57EAA2009081BC /* Assets.xcassets */; };
 		7458C6912C57EAA3009081BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7458C6902C57EAA3009081BC /* Preview Assets.xcassets */; };
+		7458C6982C57ED77009081BC /* InfoEnergyChartLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6972C57ED77009081BC /* InfoEnergyChartLinesView.swift */; };
+		7458C69C2C57ED9E009081BC /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C69B2C57ED9E009081BC /* Period.swift */; };
+		7458C6A02C57EDEC009081BC /* InfoEnergyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C69F2C57EDEC009081BC /* InfoEnergyItem.swift */; };
+		7458C6A22C57F1AA009081BC /* InfoEnergyCSVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6A12C57F189009081BC /* InfoEnergyCSVModel.swift */; };
+		7458C6A42C57F5DE009081BC /* InfoEnergyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6A32C57F5DE009081BC /* InfoEnergyMainView.swift */; };
+		7458C6A62C57F916009081BC /* mock.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7458C6A52C57F916009081BC /* mock.csv */; };
+		7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6A72C57FBB3009081BC /* ImportButton.swift */; };
+		7458C6AC2C5801B1009081BC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6AB2C5801B1009081BC /* Array+Extension.swift */; };
+		7458C6AE2C5802A6009081BC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6AD2C5802A6009081BC /* String+Extension.swift */; };
+		7458C6B02C581B83009081BC /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6AF2C581B75009081BC /* Sequence+Extension.swift */; };
+		7458C6B22C581F87009081BC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6B12C581F87009081BC /* Date+Extension.swift */; };
+		7458C6B42C5931C3009081BC /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6B32C5931BC009081BC /* Calendar+Extension.swift */; };
+		7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6B52C5933F7009081BC /* Int+Extension.swift */; };
+		7458C6BA2C5E9C71009081BC /* InfoEnergyLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */; };
+		7458C6BD2C5E9CC5009081BC /* FilterDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7458C6852C57EAA1009081BC /* InfoEnergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoEnergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7458C6882C57EAA1009081BC /* InfoEnergyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyApp.swift; sourceTree = "<group>"; };
-		7458C68A2C57EAA1009081BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7458C68A2C57EAA1009081BC /* CoffeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeView.swift; sourceTree = "<group>"; };
 		7458C68C2C57EAA2009081BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7458C68E2C57EAA2009081BC /* InfoEnergy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfoEnergy.entitlements; sourceTree = "<group>"; };
 		7458C6902C57EAA3009081BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7458C6972C57ED77009081BC /* InfoEnergyChartLinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyChartLinesView.swift; sourceTree = "<group>"; };
+		7458C69B2C57ED9E009081BC /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		7458C69F2C57EDEC009081BC /* InfoEnergyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyItem.swift; sourceTree = "<group>"; };
+		7458C6A12C57F189009081BC /* InfoEnergyCSVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyCSVModel.swift; sourceTree = "<group>"; };
+		7458C6A32C57F5DE009081BC /* InfoEnergyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyMainView.swift; sourceTree = "<group>"; };
+		7458C6A52C57F916009081BC /* mock.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = mock.csv; sourceTree = "<group>"; };
+		7458C6A72C57FBB3009081BC /* ImportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportButton.swift; sourceTree = "<group>"; };
+		7458C6AB2C5801B1009081BC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		7458C6AD2C5802A6009081BC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7458C6AF2C581B75009081BC /* Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
+		7458C6B12C581F87009081BC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		7458C6B32C5931BC009081BC /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		7458C6B52C5933F7009081BC /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyLinesView.swift; sourceTree = "<group>"; };
+		7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +82,11 @@
 		7458C6872C57EAA1009081BC /* InfoEnergy */ = {
 			isa = PBXGroup;
 			children = (
+				7458C6B72C5E9BFB009081BC /* Views */,
+				7458C6AA2C58019B009081BC /* Extensions */,
+				7458C69E2C57EDAF009081BC /* Models */,
 				7458C6882C57EAA1009081BC /* InfoEnergyApp.swift */,
-				7458C68A2C57EAA1009081BC /* ContentView.swift */,
+				7458C6A52C57F916009081BC /* mock.csv */,
 				7458C68C2C57EAA2009081BC /* Assets.xcassets */,
 				7458C68E2C57EAA2009081BC /* InfoEnergy.entitlements */,
 				7458C68F2C57EAA3009081BC /* Preview Content */,
@@ -67,6 +100,50 @@
 				7458C6902C57EAA3009081BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7458C69E2C57EDAF009081BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7458C6A12C57F189009081BC /* InfoEnergyCSVModel.swift */,
+				7458C69B2C57ED9E009081BC /* Period.swift */,
+				7458C69F2C57EDEC009081BC /* InfoEnergyItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7458C6AA2C58019B009081BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7458C6AB2C5801B1009081BC /* Array+Extension.swift */,
+				7458C6B32C5931BC009081BC /* Calendar+Extension.swift */,
+				7458C6B12C581F87009081BC /* Date+Extension.swift */,
+				7458C6B52C5933F7009081BC /* Int+Extension.swift */,
+				7458C6AF2C581B75009081BC /* Sequence+Extension.swift */,
+				7458C6AD2C5802A6009081BC /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7458C6B72C5E9BFB009081BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7458C6B82C5E9C09009081BC /* Components */,
+				7458C68A2C57EAA1009081BC /* CoffeView.swift */,
+				7458C6A32C57F5DE009081BC /* InfoEnergyMainView.swift */,
+				7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */,
+				7458C6972C57ED77009081BC /* InfoEnergyChartLinesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7458C6B82C5E9C09009081BC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7458C6A72C57FBB3009081BC /* ImportButton.swift */,
+				7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +206,7 @@
 			files = (
 				7458C6912C57EAA3009081BC /* Preview Assets.xcassets in Resources */,
 				7458C68D2C57EAA2009081BC /* Assets.xcassets in Resources */,
+				7458C6A62C57F916009081BC /* mock.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +217,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7458C68B2C57EAA1009081BC /* ContentView.swift in Sources */,
+				7458C68B2C57EAA1009081BC /* CoffeView.swift in Sources */,
+				7458C6A02C57EDEC009081BC /* InfoEnergyItem.swift in Sources */,
 				7458C6892C57EAA1009081BC /* InfoEnergyApp.swift in Sources */,
+				7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */,
+				7458C6AC2C5801B1009081BC /* Array+Extension.swift in Sources */,
+				7458C6A22C57F1AA009081BC /* InfoEnergyCSVModel.swift in Sources */,
+				7458C6B42C5931C3009081BC /* Calendar+Extension.swift in Sources */,
+				7458C6B22C581F87009081BC /* Date+Extension.swift in Sources */,
+				7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */,
+				7458C6A42C57F5DE009081BC /* InfoEnergyMainView.swift in Sources */,
+				7458C69C2C57ED9E009081BC /* Period.swift in Sources */,
+				7458C6B02C581B83009081BC /* Sequence+Extension.swift in Sources */,
+				7458C6AE2C5802A6009081BC /* String+Extension.swift in Sources */,
+				7458C6982C57ED77009081BC /* InfoEnergyChartLinesView.swift in Sources */,
+				7458C6BD2C5E9CC5009081BC /* FilterDateView.swift in Sources */,
+				7458C6BA2C5E9C71009081BC /* InfoEnergyLinesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeronimoCabezuelo.InfoEnergy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -327,7 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeronimoCabezuelo.InfoEnergy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;

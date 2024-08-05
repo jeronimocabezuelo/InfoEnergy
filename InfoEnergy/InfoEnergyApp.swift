@@ -11,7 +11,7 @@ import SwiftUI
 struct InfoEnergyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InfoEnergyMainView()
         }
     }
 }
