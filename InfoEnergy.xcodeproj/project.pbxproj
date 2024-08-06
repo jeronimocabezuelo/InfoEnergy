@@ -26,6 +26,9 @@
 		7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6B52C5933F7009081BC /* Int+Extension.swift */; };
 		7458C6BA2C5E9C71009081BC /* InfoEnergyLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */; };
 		7458C6BD2C5E9CC5009081BC /* FilterDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */; };
+		7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C12C615875009081BC /* LocalizedStringKeys.swift */; };
+		7458C6C42C615AEF009081BC /* DividedForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C32C615AE7009081BC /* DividedForEach.swift */; };
+		7458C6C62C615B28009081BC /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C52C615B28009081BC /* Legend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		7458C6B52C5933F7009081BC /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyLinesView.swift; sourceTree = "<group>"; };
 		7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDateView.swift; sourceTree = "<group>"; };
+		7458C6C12C615875009081BC /* LocalizedStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKeys.swift; sourceTree = "<group>"; };
+		7458C6C32C615AE7009081BC /* DividedForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividedForEach.swift; sourceTree = "<group>"; };
+		7458C6C52C615B28009081BC /* Legend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		7458C6872C57EAA1009081BC /* InfoEnergy */ = {
 			isa = PBXGroup;
 			children = (
+				7458C6C02C615865009081BC /* Localizable */,
 				7458C6B72C5E9BFB009081BC /* Views */,
 				7458C6AA2C58019B009081BC /* Extensions */,
 				7458C69E2C57EDAF009081BC /* Models */,
@@ -140,10 +147,20 @@
 		7458C6B82C5E9C09009081BC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7458C6C32C615AE7009081BC /* DividedForEach.swift */,
 				7458C6A72C57FBB3009081BC /* ImportButton.swift */,
 				7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */,
+				7458C6C52C615B28009081BC /* Legend.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7458C6C02C615865009081BC /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				7458C6C12C615875009081BC /* LocalizedStringKeys.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +240,10 @@
 				7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */,
 				7458C6AC2C5801B1009081BC /* Array+Extension.swift in Sources */,
 				7458C6A22C57F1AA009081BC /* InfoEnergyCSVModel.swift in Sources */,
+				7458C6C62C615B28009081BC /* Legend.swift in Sources */,
 				7458C6B42C5931C3009081BC /* Calendar+Extension.swift in Sources */,
 				7458C6B22C581F87009081BC /* Date+Extension.swift in Sources */,
+				7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */,
 				7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */,
 				7458C6A42C57F5DE009081BC /* InfoEnergyMainView.swift in Sources */,
 				7458C69C2C57ED9E009081BC /* Period.swift in Sources */,
@@ -232,6 +251,7 @@
 				7458C6AE2C5802A6009081BC /* String+Extension.swift in Sources */,
 				7458C6982C57ED77009081BC /* InfoEnergyChartLinesView.swift in Sources */,
 				7458C6BD2C5E9CC5009081BC /* FilterDateView.swift in Sources */,
+				7458C6C42C615AEF009081BC /* DividedForEach.swift in Sources */,
 				7458C6BA2C5E9C71009081BC /* InfoEnergyLinesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

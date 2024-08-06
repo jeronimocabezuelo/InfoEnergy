@@ -26,6 +26,15 @@ enum Period: Int, CaseIterable {
         case .total: return .orange
         }
     }
+    
+    var title: LocalizedStringKey {
+        switch self {
+        case .valley: return .valley
+        case .flat: return .flat
+        case .point: return .point
+        case .total: return .total
+        }
+    }
 }
 
 extension Period: Comparable {

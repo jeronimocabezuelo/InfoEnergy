@@ -23,6 +23,8 @@ struct InfoEnergyMainView: View {
                 ImportButton(onLoadDocument: onLoadDocument)
             }
             
+            Legend()
+            
             InfoEnergyLinesView(model: model)
         }
         .padding(16)

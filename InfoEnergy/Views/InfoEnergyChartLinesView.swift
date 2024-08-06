@@ -19,7 +19,6 @@ struct InfoEnergyChartLinesView: View {
             ChartLineView(items: periodItems.at(1))
             ChartLineView(items: periodItems.at(2))
         }
-//        .chartLegend(position: .top, alignment: .leading, spacing: 8)
     }
 }
 
