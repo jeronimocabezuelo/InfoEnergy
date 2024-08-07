@@ -12,4 +12,7 @@ extension LocalizedStringKey {
     static var flat: Self { "Llano" }
     static var point: Self { "Punta" }
     static var total: Self { "Total" }
+    static var dateValue: Self = "Date"
+    static var kWhValue: Self = "kWh"
+    static var periodValue: Self = "period"
 }

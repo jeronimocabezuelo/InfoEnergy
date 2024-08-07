@@ -26,6 +26,8 @@ struct InfoEnergyMainView: View {
             Legend()
             
             InfoEnergyLinesView(model: model)
+            Spacer(minLength: 16)
+            InfoEnergyTimesView(model: model)
         }
         .padding(16)
     }

@@ -38,7 +38,7 @@ enum Period: Int, CaseIterable {
 }
 
 extension Period: Comparable {
-    static func < (lhs: Period, rhs: Period) -> Bool {
+    static func < (lhs: Self, rhs: Self) -> Bool {
         lhs.rawValue < rhs.rawValue
     }
 }

@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-class InfoEnergyModel: ObservableObject {
-    @Published var startDate: Date = InfoEnergyCSVModel.mock.items.first?.date ?? .now
-    @Published var endDate: Date = InfoEnergyCSVModel.mock.items.last?.date ?? .now
-    @Published var range: Int = 7
-    @Published var rawDataModel: InfoEnergyCSVModel = .mock
-}
-
-
 struct InfoEnergyLinesView: View {
     @ObservedObject var model: InfoEnergyModel
     
@@ -40,30 +32,24 @@ struct InfoEnergyLinesView: View {
     }
     
     func reloadItems() {
-        let groupedByDateDataModel = Dictionary(grouping: model.rawDataModel.items) { item in
-            item.date
-        }
+        let groupedByDateDataModel = model.rawDataModel.items.groupedByDate()
         totalItems = groupedByDateDataModel
             .map { date, items in
-                let kWh = items.map({ $0.kWh }).sum()
-                return InfoEnergyItem(
+                InfoEnergyItem(
                     date: date,
-                    kWh: kWh,
+                    kWh: items.kWh,
                     period: .total
                 )
             }
             .sorted()
         let barsItems = groupedByDateDataModel
             .flatMap { date, items in
-                let groupedByPeriod = Dictionary(grouping: items) { item in
-                    item.period
-                }
+                let groupedByPeriod = items.groupedByPeriod()
                 
                 return groupedByPeriod.map { period, periodItems in
-                    let kWh = periodItems.map({ $0.kWh }).sum()
-                    return InfoEnergyItem(
+                    InfoEnergyItem(
                         date: date,
-                        kWh: kWh,
+                        kWh: periodItems.kWh,
                         period: period
                     )
                 }
@@ -71,16 +57,13 @@ struct InfoEnergyLinesView: View {
             }
             .sorted()
         
-        
-        periodItems = Dictionary(grouping: barsItems) { item in
-            item.period
-        }.map({ $1.sorted() })
+        periodItems = barsItems.groupedByPeriod()
+            .map({ $1.sorted() })
         
         reloadRangeItems()
     }
     
     func reloadRangeItems() {
-        
         totalItemsRanged = totalItems.ranged(by: model.range)
         periodItemsRanged = periodItems.map({ $0.ranged(by: model.range) })
         
@@ -88,7 +71,7 @@ struct InfoEnergyLinesView: View {
     }
     
     func reloadFilterItems() {
-        totalItemsFiltered = totalItemsRanged.filter({ model.startDate < $0.date && $0.date < model.endDate})
-        periodItemsFiltered = periodItemsRanged.map({ $0.filter({ model.startDate < $0.date && $0.date < model.endDate }) })
+        totalItemsFiltered = totalItemsRanged.filter(model.startDate, model.endDate)
+        periodItemsFiltered = periodItemsRanged.map({ $0.filter(model.startDate, model.endDate)})
     }
 }

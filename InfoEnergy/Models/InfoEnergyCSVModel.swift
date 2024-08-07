@@ -44,7 +44,7 @@ extension InfoEnergyCSVModel {
     }
 }
 
-struct InfoEnergyCSVItemModel {
+struct InfoEnergyCSVItemModel: Equatable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod {
     let cups: String
     let date: Date
     let time: Int
@@ -63,10 +63,6 @@ struct InfoEnergyCSVItemModel {
         
         return time.period
     }
-}
-
-extension InfoEnergyCSVItemModel: Equatable {
-    
 }
 
 extension InfoEnergyCSVItemModel {

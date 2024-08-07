@@ -18,6 +18,9 @@ struct InfoEnergyChartLinesView: View {
             ChartLineView(items: periodItems.at(0))
             ChartLineView(items: periodItems.at(1))
             ChartLineView(items: periodItems.at(2))
+//            ChartBarsView(items: periodItems.at(0))
+//            ChartBarsView(items: periodItems.at(1))
+//            ChartBarsView(items: periodItems.at(2))
         }
     }
 }
@@ -39,10 +42,10 @@ struct ChartLineView: ChartContent {
 }
 
 struct ChartBarsView: ChartContent {
-    var items: [InfoEnergyItem]
+    var items: [InfoEnergyItem]?
     
     var body: some ChartContent {
-        ForEach(items, id: \.id) { item in
+        ForEach(items ?? [], id: \.id) { item in
             BarMark(
                 x: .value(.dateValue, item.date),
                 y: .value(.kWhValue, item.kWh)
@@ -51,10 +54,4 @@ struct ChartBarsView: ChartContent {
             .position(by: .value(.periodValue, item.period.rawValue))
         }
     }
-}
-
-extension LocalizedStringKey {
-    static var dateValue: LocalizedStringKey = "Date"
-    static var kWhValue: LocalizedStringKey = "kWh"
-    static var periodValue: LocalizedStringKey = "period"
 }

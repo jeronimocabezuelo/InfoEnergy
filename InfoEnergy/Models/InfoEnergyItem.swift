@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InfoEnergyItem: Identifiable {
+struct InfoEnergyItem: Identifiable, InfoEnergyDate, InfoEnergyKWh, InfoEnergyPeriod {
     let id = UUID()
     
     let date: Date
@@ -16,7 +16,7 @@ struct InfoEnergyItem: Identifiable {
 }
 
 extension InfoEnergyItem: Comparable {
-    static func < (lhs: InfoEnergyItem, rhs: InfoEnergyItem) -> Bool {
+    static func < (lhs: Self, rhs: Self) -> Bool {
         if lhs.date < rhs.date {
             return true
         } else {
@@ -26,33 +26,28 @@ extension InfoEnergyItem: Comparable {
 }
 
 extension Array where Element == InfoEnergyItem {
-    static var mock: [InfoEnergyItem] {
-        let groupedByDateDataModel = Dictionary(grouping: InfoEnergyCSVModel.mock.items) { item in
-            item.date
-        }
+    static var mock: Self {
+        let groupedByDateDataModel = InfoEnergyCSVModel.mock.items.groupedByDate()
         return groupedByDateDataModel
             .map { date, items in
-                let kWh = items.map({ $0.kWh }).sum()
                 return InfoEnergyItem(
                     date: date,
-                    kWh: kWh,
+                    kWh: items.kWh,
                     period: .total
                 )
             }
             .sorted()
     }
     
-    
-    func ranged(by range: Int) -> [InfoEnergyItem] {
+    func ranged(by range: Int) -> Self {
         var result = [InfoEnergyItem]()
         for item in self {
             let rangedItems = filter({
                 $0.date < item.date &&
                 $0.date >= item.date.byAdding(.day, value: -range) })
-            let rangedKWh = rangedItems.map({ $0.kWh }).sum()
             let rangedItem = InfoEnergyItem(
                 date: item.date,
-                kWh: rangedKWh,
+                kWh: rangedItems.kWh,
                 period: item.period
             )
             

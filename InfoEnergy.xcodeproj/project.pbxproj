@@ -29,6 +29,10 @@
 		7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C12C615875009081BC /* LocalizedStringKeys.swift */; };
 		7458C6C42C615AEF009081BC /* DividedForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C32C615AE7009081BC /* DividedForEach.swift */; };
 		7458C6C62C615B28009081BC /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C52C615B28009081BC /* Legend.swift */; };
+		7458C6C82C627A19009081BC /* InfoEnergyTimeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C72C627A0A009081BC /* InfoEnergyTimeItem.swift */; };
+		7458C6CA2C627AA2009081BC /* InfoEnergyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6C92C627A9C009081BC /* InfoEnergyModel.swift */; };
+		7458C6CC2C627AF3009081BC /* InfoEnergyTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6CB2C627AF2009081BC /* InfoEnergyTimesView.swift */; };
+		7458C6CE2C63C975009081BC /* InfoEnergyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6CD2C63C975009081BC /* InfoEnergyProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		7458C6C12C615875009081BC /* LocalizedStringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKeys.swift; sourceTree = "<group>"; };
 		7458C6C32C615AE7009081BC /* DividedForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividedForEach.swift; sourceTree = "<group>"; };
 		7458C6C52C615B28009081BC /* Legend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
+		7458C6C72C627A0A009081BC /* InfoEnergyTimeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyTimeItem.swift; sourceTree = "<group>"; };
+		7458C6C92C627A9C009081BC /* InfoEnergyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyModel.swift; sourceTree = "<group>"; };
+		7458C6CB2C627AF2009081BC /* InfoEnergyTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyTimesView.swift; sourceTree = "<group>"; };
+		7458C6CD2C63C975009081BC /* InfoEnergyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +120,12 @@
 		7458C69E2C57EDAF009081BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7458C6A12C57F189009081BC /* InfoEnergyCSVModel.swift */,
 				7458C69B2C57ED9E009081BC /* Period.swift */,
+				7458C6CD2C63C975009081BC /* InfoEnergyProtocol.swift */,
+				7458C6A12C57F189009081BC /* InfoEnergyCSVModel.swift */,
 				7458C69F2C57EDEC009081BC /* InfoEnergyItem.swift */,
+				7458C6C72C627A0A009081BC /* InfoEnergyTimeItem.swift */,
+				7458C6C92C627A9C009081BC /* InfoEnergyModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 				7458C68A2C57EAA1009081BC /* CoffeView.swift */,
 				7458C6A32C57F5DE009081BC /* InfoEnergyMainView.swift */,
 				7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */,
+				7458C6CB2C627AF2009081BC /* InfoEnergyTimesView.swift */,
 				7458C6972C57ED77009081BC /* InfoEnergyChartLinesView.swift */,
 			);
 			path = Views;
@@ -237,17 +249,21 @@
 				7458C68B2C57EAA1009081BC /* CoffeView.swift in Sources */,
 				7458C6A02C57EDEC009081BC /* InfoEnergyItem.swift in Sources */,
 				7458C6892C57EAA1009081BC /* InfoEnergyApp.swift in Sources */,
+				7458C6CC2C627AF3009081BC /* InfoEnergyTimesView.swift in Sources */,
 				7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */,
 				7458C6AC2C5801B1009081BC /* Array+Extension.swift in Sources */,
 				7458C6A22C57F1AA009081BC /* InfoEnergyCSVModel.swift in Sources */,
 				7458C6C62C615B28009081BC /* Legend.swift in Sources */,
 				7458C6B42C5931C3009081BC /* Calendar+Extension.swift in Sources */,
+				7458C6CE2C63C975009081BC /* InfoEnergyProtocol.swift in Sources */,
 				7458C6B22C581F87009081BC /* Date+Extension.swift in Sources */,
 				7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */,
 				7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */,
+				7458C6C82C627A19009081BC /* InfoEnergyTimeItem.swift in Sources */,
 				7458C6A42C57F5DE009081BC /* InfoEnergyMainView.swift in Sources */,
 				7458C69C2C57ED9E009081BC /* Period.swift in Sources */,
 				7458C6B02C581B83009081BC /* Sequence+Extension.swift in Sources */,
+				7458C6CA2C627AA2009081BC /* InfoEnergyModel.swift in Sources */,
 				7458C6AE2C5802A6009081BC /* String+Extension.swift in Sources */,
 				7458C6982C57ED77009081BC /* InfoEnergyChartLinesView.swift in Sources */,
 				7458C6BD2C5E9CC5009081BC /* FilterDateView.swift in Sources */,

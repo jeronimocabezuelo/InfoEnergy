@@ -17,4 +17,8 @@ extension Date {
             to: self
         ) ?? self
     }
+    
+    func isBetween(_ startDate: Date, _ endDate: Date) -> Bool {
+        return startDate < self && self < endDate
+    }
 }
