@@ -11,6 +11,7 @@ import Charts
 struct InfoEnergyChartLinesView: View {
     var totalItems: [InfoEnergyItem]
     var periodItems: [[InfoEnergyItem]]
+    var values: AxisMarkValues
     
     var body: some View {
         Chart {
@@ -21,6 +22,12 @@ struct InfoEnergyChartLinesView: View {
 //            ChartBarsView(items: periodItems.at(0))
 //            ChartBarsView(items: periodItems.at(1))
 //            ChartBarsView(items: periodItems.at(2))
+        }
+        .chartXAxis {
+            AxisMarks(values: values) { value in
+                AxisGridLine()
+                AxisValueLabel(collisionResolution: .greedy(minimumSpacing: 0))
+            }
         }
     }
 }

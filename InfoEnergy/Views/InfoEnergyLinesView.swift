@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct InfoEnergyLinesView: View {
     @ObservedObject var model: InfoEnergyModel
@@ -18,8 +19,23 @@ struct InfoEnergyLinesView: View {
     @State var periodItemsRanged: [[InfoEnergyItem]] = []
     @State var periodItemsFiltered: [[InfoEnergyItem]] = []
     
+    var values: AxisMarkValues {
+        let days =  Calendar.current.daysBetween(from: model.startDate, to: model.endDate)
+        if days > 35 {
+            return .stride(by: .month, count: 1)
+        } else if days > 20 {
+            return .stride(by: .day, count: 10)
+        } else {
+            return .stride(by: .day, count: 3)
+        }
+    }
+    
     var body: some View {
-        InfoEnergyChartLinesView(totalItems: totalItemsFiltered, periodItems: periodItemsFiltered)
+        InfoEnergyChartLinesView(
+            totalItems: totalItemsFiltered,
+            periodItems: periodItemsFiltered,
+            values: values
+        )
             .onChange(of: model.range, reloadRangeItems)
             .onChange(of: model.startDate, reloadFilterItems)
             .onChange(of: model.endDate, reloadFilterItems)

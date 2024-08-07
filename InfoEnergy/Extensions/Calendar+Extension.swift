@@ -112,4 +112,9 @@ extension Calendar {
         return nil
     }
     
+    func daysBetween(from dateFirst: Date, to dateSecond: Date) -> Int {
+        let components = dateComponents([.day], from: dateFirst, to: dateSecond)
+        return components.day ?? 0
+    }
+    
 }
