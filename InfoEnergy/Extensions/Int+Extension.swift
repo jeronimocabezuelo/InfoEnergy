@@ -18,4 +18,8 @@ extension Int {
             return .point
         }
     }
+    
+    func isBetween(_ min: Int, max: Int) -> Bool {
+        return min <= self && self <= max
+    }
 }

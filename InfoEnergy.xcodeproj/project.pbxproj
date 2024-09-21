@@ -34,6 +34,8 @@
 		7458C6CC2C627AF3009081BC /* InfoEnergyTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6CB2C627AF2009081BC /* InfoEnergyTimesView.swift */; };
 		7458C6CE2C63C975009081BC /* InfoEnergyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6CD2C63C975009081BC /* InfoEnergyProtocol.swift */; };
 		7458C6D02C63D904009081BC /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458C6CF2C63D904009081BC /* DateFormatter+Extension.swift */; };
+		7477919C2C9EF898003A4C19 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477919B2C9EF898003A4C19 /* Color+Extension.swift */; };
+		7477919E2C9EFC59003A4C19 /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477919D2C9EFC59003A4C19 /* Float+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		7458C6CB2C627AF2009081BC /* InfoEnergyTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyTimesView.swift; sourceTree = "<group>"; };
 		7458C6CD2C63C975009081BC /* InfoEnergyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyProtocol.swift; sourceTree = "<group>"; };
 		7458C6CF2C63D904009081BC /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		7477919B2C9EF898003A4C19 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		7477919D2C9EFC59003A4C19 /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +141,10 @@
 			children = (
 				7458C6AB2C5801B1009081BC /* Array+Extension.swift */,
 				7458C6B32C5931BC009081BC /* Calendar+Extension.swift */,
+				7477919B2C9EF898003A4C19 /* Color+Extension.swift */,
 				7458C6B12C581F87009081BC /* Date+Extension.swift */,
 				7458C6CF2C63D904009081BC /* DateFormatter+Extension.swift */,
+				7477919D2C9EFC59003A4C19 /* Float+Extension.swift */,
 				7458C6B52C5933F7009081BC /* Int+Extension.swift */,
 				7458C6AF2C581B75009081BC /* Sequence+Extension.swift */,
 				7458C6AD2C5802A6009081BC /* String+Extension.swift */,
@@ -250,10 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7458C68B2C57EAA1009081BC /* CoffeView.swift in Sources */,
+				7477919C2C9EF898003A4C19 /* Color+Extension.swift in Sources */,
 				7458C6A02C57EDEC009081BC /* InfoEnergyItem.swift in Sources */,
 				7458C6D02C63D904009081BC /* DateFormatter+Extension.swift in Sources */,
 				7458C6892C57EAA1009081BC /* InfoEnergyApp.swift in Sources */,
 				7458C6CC2C627AF3009081BC /* InfoEnergyTimesView.swift in Sources */,
+				7477919E2C9EFC59003A4C19 /* Float+Extension.swift in Sources */,
 				7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */,
 				7458C6AC2C5801B1009081BC /* Array+Extension.swift in Sources */,
 				7458C6A22C57F1AA009081BC /* InfoEnergyCSVModel.swift in Sources */,
