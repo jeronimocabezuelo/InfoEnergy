@@ -11,25 +11,31 @@ struct InfoEnergyMainView: View {
     @ObservedObject var model = InfoEnergyModel()
     
     var body: some View {
-        VStack {
-            HStack {
-                FilterDateView(startDate: $model.startDate, endDate: $model.endDate)
-                Spacer()
-                Stepper(
-                    "Groping \(model.range) days",
-                    value: $model.range,
-                    in: 1...1000
-                )
-                ImportButton(onLoadDocument: onLoadDocument)
+        ZStack {
+            VStack {
+                HStack {
+                    FilterDateView(startDate: $model.startDate, endDate: $model.endDate)
+                    Spacer()
+                    Stepper(
+                        "Groping \(model.range) days",
+                        value: $model.range,
+                        in: 1...1000
+                    )
+                    ImportButton(onLoadDocument: onLoadDocument)
+                }
+                
+                Legend(hoveredPeriod: $model.hoveredPeriod)
+                
+                InfoEnergyLinesView(model: model)
+                Spacer(minLength: 16)
+                InfoEnergyTimesView(model: model)
             }
+            .padding(16)
             
-            Legend()
-            
-            InfoEnergyLinesView(model: model)
-            Spacer(minLength: 16)
-            InfoEnergyTimesView(model: model)
+            if let hoveredPeriod = model.hoveredPeriod {
+                ClockView(period: hoveredPeriod)
+            }
         }
-        .padding(16)
     }
     
     func onLoadDocument(_ newDocument: String) {

@@ -12,4 +12,5 @@ class InfoEnergyModel: ObservableObject {
     @Published var endDate: Date = InfoEnergyCSVModel.mock.items.last?.date ?? .now
     @Published var range: Int = 7
     @Published var rawDataModel: InfoEnergyCSVModel = .mock
+    @Published var hoveredPeriod: Period? = nil
 }
