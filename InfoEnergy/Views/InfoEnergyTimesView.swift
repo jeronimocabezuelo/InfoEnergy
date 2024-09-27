@@ -10,17 +10,17 @@ import Charts
 
 struct TimesAnnotationView: View {
     let time: Int
-    let times: [InfoEnergyTimeItem]
+    let timeItems: [InfoEnergyTimeItem]
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(time.description)
                 .font(.headline)
             Divider()
-            Text("Valle: \(times.filter({$0.period == .valley}).kWh.toDecimalString())")
-            Text("Llano: \(times.filter({$0.period == .flat}).kWh.toDecimalString())")
-            Text("Punta: \(times.filter({$0.period == .point}).kWh.toDecimalString())")
-            Text("Total: \(times.kWh.toDecimalString())")
+            Text("Valle: \(timeItems.filter({$0.period == .valley}).kWh.toDecimalString())")
+            Text("Llano: \(timeItems.filter({$0.period == .flat}).kWh.toDecimalString())")
+            Text("Punta: \(timeItems.filter({$0.period == .point}).kWh.toDecimalString())")
+            Text("Total: \(timeItems.kWh.toDecimalString())")
         }
         .padding()
         .background(Color.annotationBackground.opacity(0.8))
@@ -59,17 +59,17 @@ struct InfoEnergyTimesView: View {
                     ) {
                         TimesAnnotationView(
                             time: selectedTime,
-                            times: times
+                            timeItems: times
                         )
                     }
             }
         }
-        .chartOverlay { (chartProxy: ChartProxy) in
+        .chartOverlay { chart in
             Color.clear
                 .onContinuousHover { hoverPhase in
                     switch hoverPhase {
                     case .active(let hoverLocation):
-                        selectedTime = chartProxy.value(
+                        selectedTime = chart.value(
                             atX: hoverLocation.x, as: Int.self
                         )
                     case .ended:
