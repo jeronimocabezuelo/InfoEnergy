@@ -8,23 +8,7 @@
 import SwiftUI
 import Charts
 
-struct LinesAnnotationView: View {
-    let date: Date
-    let items: [InfoEnergyItem]
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(date.formatted(date: .numeric, time: .omitted))
-            Divider()
-            Text("Valle: \(items.filter({$0.period == .valley}).kWh.toDecimalString())")
-            Text("Llano: \(items.filter({$0.period == .flat}).kWh.toDecimalString())")
-            Text("Punta: \(items.filter({$0.period == .point}).kWh.toDecimalString())")
-            Text("Total: \(items.kWh.toDecimalString())")
-        }
-        .padding()
-        .background(Color.annotationBackground.opacity(0.8))
-    }
-}
+
 
 struct InfoEnergyChartLinesView: View {
     var totalItems: [InfoEnergyItem]

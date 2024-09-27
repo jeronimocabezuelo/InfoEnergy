@@ -38,6 +38,7 @@
 		7477919E2C9EFC59003A4C19 /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477919D2C9EFC59003A4C19 /* Float+Extension.swift */; };
 		747791A02CA02C27003A4C19 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477919F2CA02C21003A4C19 /* ClockView.swift */; };
 		747791A22CA07440003A4C19 /* HoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A12CA07440003A4C19 /* HoverView.swift */; };
+		747791A42CA70258003A4C19 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A32CA70252003A4C19 /* AnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		7477919D2C9EFC59003A4C19 /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
 		7477919F2CA02C21003A4C19 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		747791A12CA07440003A4C19 /* HoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverView.swift; sourceTree = "<group>"; };
+		747791A32CA70252003A4C19 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		7458C6B82C5E9C09009081BC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				747791A32CA70252003A4C19 /* AnnotationView.swift */,
 				7477919F2CA02C21003A4C19 /* ClockView.swift */,
 				7458C6C32C615AE7009081BC /* DividedForEach.swift */,
 				7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */,
@@ -279,6 +282,7 @@
 				7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */,
 				7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */,
 				747791A22CA07440003A4C19 /* HoverView.swift in Sources */,
+				747791A42CA70258003A4C19 /* AnnotationView.swift in Sources */,
 				7458C6C82C627A19009081BC /* InfoEnergyTimeItem.swift in Sources */,
 				7458C6A42C57F5DE009081BC /* InfoEnergyMainView.swift in Sources */,
 				7458C69C2C57ED9E009081BC /* Period.swift in Sources */,
