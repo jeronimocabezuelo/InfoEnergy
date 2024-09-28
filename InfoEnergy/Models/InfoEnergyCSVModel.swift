@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InfoEnergyCSVModel {
+struct InfoEnergyCSVModel: Codable {
     let items: [InfoEnergyCSVItemModel]
 }
 
@@ -44,7 +44,7 @@ extension InfoEnergyCSVModel {
     }
 }
 
-struct InfoEnergyCSVItemModel: Equatable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod {
+struct InfoEnergyCSVItemModel: Codable, Equatable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod {
     let cups: String
     let date: Date
     let time: Int

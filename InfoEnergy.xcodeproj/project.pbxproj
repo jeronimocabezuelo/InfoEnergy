@@ -39,6 +39,7 @@
 		747791A02CA02C27003A4C19 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477919F2CA02C21003A4C19 /* ClockView.swift */; };
 		747791A22CA07440003A4C19 /* HoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A12CA07440003A4C19 /* HoverView.swift */; };
 		747791A42CA70258003A4C19 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A32CA70252003A4C19 /* AnnotationView.swift */; };
+		747791A72CA70705003A4C19 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A62CA70702003A4C19 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		7477919F2CA02C21003A4C19 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		747791A12CA07440003A4C19 /* HoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverView.swift; sourceTree = "<group>"; };
 		747791A32CA70252003A4C19 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		747791A62CA70702003A4C19 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +112,9 @@
 			children = (
 				7458C6C02C615865009081BC /* Localizable */,
 				7458C6B72C5E9BFB009081BC /* Views */,
-				7458C6AA2C58019B009081BC /* Extensions */,
 				7458C69E2C57EDAF009081BC /* Models */,
+				747791A52CA706E5003A4C19 /* Utils */,
+				7458C6AA2C58019B009081BC /* Extensions */,
 				7458C6882C57EAA1009081BC /* InfoEnergyApp.swift */,
 				7458C6A52C57F916009081BC /* mock.csv */,
 				7458C68C2C57EAA2009081BC /* Assets.xcassets */,
@@ -191,6 +194,14 @@
 				7458C6C12C615875009081BC /* LocalizedStringKeys.swift */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		747791A52CA706E5003A4C19 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				747791A62CA70702003A4C19 /* UserManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */,
 				7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */,
 				747791A22CA07440003A4C19 /* HoverView.swift in Sources */,
+				747791A72CA70705003A4C19 /* UserManager.swift in Sources */,
 				747791A42CA70258003A4C19 /* AnnotationView.swift in Sources */,
 				7458C6C82C627A19009081BC /* InfoEnergyTimeItem.swift in Sources */,
 				7458C6A42C57F5DE009081BC /* InfoEnergyMainView.swift in Sources */,

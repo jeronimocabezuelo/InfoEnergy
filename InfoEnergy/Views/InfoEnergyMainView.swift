@@ -36,14 +36,18 @@ struct InfoEnergyMainView: View {
                 ClockView(period: hoveredPeriod)
             }
         }
+        .onAppear {
+            guard let storedModel = UserManager.shared.saveCVSModel else { return }
+            model.update(with: storedModel)
+        }
     }
     
     func onLoadDocument(_ newDocument: String) {
         let csvModel = InfoEnergyCSVModel(document: newDocument)
         
-        self.model.rawDataModel = csvModel
-        self.model.startDate = csvModel.items.first?.date ?? .now
-        self.model.endDate = csvModel.items.last?.date ?? .now
+        UserManager.shared.saveCVSModel = csvModel
+        
+        self.model.update(with: csvModel)
     }
 }
 
