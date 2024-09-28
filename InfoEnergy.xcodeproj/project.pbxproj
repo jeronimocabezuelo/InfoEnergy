@@ -40,6 +40,8 @@
 		747791A22CA07440003A4C19 /* HoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A12CA07440003A4C19 /* HoverView.swift */; };
 		747791A42CA70258003A4C19 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A32CA70252003A4C19 /* AnnotationView.swift */; };
 		747791A72CA70705003A4C19 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A62CA70702003A4C19 /* UserManager.swift */; };
+		747791AA2CA84A24003A4C19 /* DeveloperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 747791A92CA84A24003A4C19 /* DeveloperKit */; };
+		747791AD2CA84C63003A4C19 /* DeveloperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 747791AC2CA84C63003A4C19 /* DeveloperKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747791AD2CA84C63003A4C19 /* DeveloperKit in Frameworks */,
+				747791AA2CA84A24003A4C19 /* DeveloperKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 7458C67C2C57EAA1009081BC;
+			packageReferences = (
+				747791AB2CA84C63003A4C19 /* XCLocalSwiftPackageReference "../DeveloperKit" */,
+			);
 			productRefGroup = 7458C6862C57EAA1009081BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -525,6 +532,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		747791AB2CA84C63003A4C19 /* XCLocalSwiftPackageReference "../DeveloperKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../DeveloperKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		747791A92CA84A24003A4C19 /* DeveloperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeveloperKit;
+		};
+		747791AC2CA84C63003A4C19 /* DeveloperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeveloperKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7458C67D2C57EAA1009081BC /* Project object */;
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DeveloperKit
 
 class InfoEnergyModel: ObservableObject {
     @Published var startDate: Date = InfoEnergyCSVModel.mock.items.first?.date ?? .now
@@ -18,5 +19,7 @@ class InfoEnergyModel: ObservableObject {
         rawDataModel = model
         startDate = model.items.first?.date ?? .now
         endDate = model.items.last?.date ?? .now
+        
+        let dev = DeveloperKit()
     }
 }

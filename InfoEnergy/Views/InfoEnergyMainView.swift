@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DeveloperKit
 
 struct InfoEnergyMainView: View {
     @ObservedObject var model = InfoEnergyModel()
