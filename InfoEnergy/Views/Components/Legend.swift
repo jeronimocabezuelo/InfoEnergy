@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DeveloperKit
 
 struct PeriodLegend: View {
     let period: Period
