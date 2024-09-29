@@ -66,7 +66,7 @@ struct ClockView: View {
     }
 }
 
-fileprivate struct ClockArc: View {
+private struct ClockArc: View {
     var startAngle: Angle
     var endAngle: Angle
     var color: Color

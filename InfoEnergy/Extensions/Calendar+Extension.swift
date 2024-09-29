@@ -88,6 +88,7 @@ extension Calendar {
     }
     
     static func calculateGoodFriday(for year: Int) -> Date? {
+        // swiftlint: disable identifier_name
         // Algoritmo de cálculo de la fecha de Pascua (domingo de Pascua)
         let a = year % 19
         let b = year / 100
@@ -110,6 +111,7 @@ extension Calendar {
             return calendar.date(byAdding: .day, value: -2, to: easterSunday) // Viernes Santo es dos días antes del domingo de Pascua
         }
         return nil
+        // swiftlint: enable identifier_name
     }
     
     func daysBetween(from dateFirst: Date, to dateSecond: Date) -> Int {

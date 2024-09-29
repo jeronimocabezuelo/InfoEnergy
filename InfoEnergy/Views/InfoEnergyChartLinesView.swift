@@ -8,8 +8,6 @@
 import SwiftUI
 import Charts
 
-
-
 struct InfoEnergyChartLinesView: View {
     var totalItems: [InfoEnergyItem]
     var periodItems: [[InfoEnergyItem]]
@@ -63,7 +61,8 @@ struct InfoEnergyChartLinesView: View {
                 .foregroundStyle(.primary.opacity(0.2))
                 .annotation(
                     position: selectedDate < midDate ? .trailing : .leading,
-                    alignment: .center, spacing: 0
+                    alignment: .center,
+                    spacing: 0
                 ) {
                     LinesAnnotationView(
                         date: selectedDate,

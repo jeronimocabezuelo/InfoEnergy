@@ -12,7 +12,7 @@ struct FilterDateView: View {
     @Binding var endDate: Date
     
     var body: some View {
-        HStack{
+        HStack {
             DatePicker(
                 "Start Date",
                 selection: $startDate,

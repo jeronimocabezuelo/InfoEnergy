@@ -11,10 +11,6 @@ import UniformTypeIdentifiers
 struct InputDocument: Equatable {
     var input: String
     
-    init(input: String) {
-        self.input = input
-    }
-    
     static var mock: Self {
         if let path = Bundle.main.path(forResource: "mock", ofType: "csv"),
            let input = try? String(contentsOfFile: path) {
@@ -24,7 +20,7 @@ struct InputDocument: Equatable {
         }
     }
     
-    static func  == (lhs: Self, rhs: Self) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.input == rhs.input
     }
 }

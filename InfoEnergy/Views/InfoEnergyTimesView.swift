@@ -8,8 +8,6 @@
 import SwiftUI
 import Charts
 
-
-
 struct InfoEnergyTimesView: View {
     @ObservedObject var model: InfoEnergyModel
     
@@ -38,7 +36,8 @@ struct InfoEnergyTimesView: View {
                     .foregroundStyle(.primary.opacity(0.2))
                     .annotation(
                         position: selectedTime < 12 ? .trailing : .leading,
-                        alignment: .center, spacing: 0
+                        alignment: .center,
+                        spacing: 0
                     ) {
                         TimesAnnotationView(
                             time: selectedTime,

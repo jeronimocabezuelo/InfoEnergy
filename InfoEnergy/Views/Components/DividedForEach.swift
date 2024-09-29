@@ -24,7 +24,7 @@ struct DividedForEach<Data: RandomAccessCollection, ID: Hashable, Content: View,
         ForEach(data, id: id) { element in
             content(element)
             
-            if element[keyPath: id] != data.last![keyPath: id] {
+            if element[keyPath: id] != data.last?[keyPath: id] {
                 divider()
             }
         }

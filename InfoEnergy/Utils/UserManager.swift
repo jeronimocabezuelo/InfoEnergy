@@ -12,7 +12,6 @@ public enum UserDefaultKey: String {
     case saveCVSModel
 }
 
-
 class UserManager {
     static var shared = UserManager()
     
