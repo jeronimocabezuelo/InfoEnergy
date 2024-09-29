@@ -8,14 +8,5 @@
 import Foundation
 
 extension String {
-    enum CustomDateFormat: String {
-        case presentationDateFormat = "dd/MM/yyyy"
-    }
-    
-    func createDate(dateFormat: CustomDateFormat = .presentationDateFormat) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat.rawValue
-        
-        return dateFormatter.date(from: self)
-    }
+
 }
