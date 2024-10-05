@@ -73,7 +73,9 @@ struct InfoEnergyLinesView: View {
             }
             .sorted()
         
-        periodItems = barsItems.groupedByPeriod()
+        periodItems = barsItems
+            .groupedByPeriod()
+            .addMissingPeriods()
             .map({ $1.sorted() })
         
         reloadRangeItems()
@@ -91,3 +93,5 @@ struct InfoEnergyLinesView: View {
         periodItemsFiltered = periodItemsRanged.map({ $0.filter(model.startDate, model.endDate)})
     }
 }
+
+
