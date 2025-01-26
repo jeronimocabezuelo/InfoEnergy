@@ -20,7 +20,7 @@ extension Array where Element == (Period, [InfoEnergyItem]) {
             
             while currentDate <= maxDate {
                 if !dates.contains(currentDate) {
-                    updatedItems.append(.init(date: currentDate, kWh: 0, period: period))
+                    updatedItems.append(.init(date: currentDate, kWh: .zero, period: period, pkWh: .zero))
                 }
                 currentDate = currentDate.byAdding(.day, value: 1)
             }

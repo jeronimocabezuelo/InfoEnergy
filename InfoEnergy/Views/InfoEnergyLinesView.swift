@@ -54,7 +54,8 @@ struct InfoEnergyLinesView: View {
                 InfoEnergyItem(
                     date: date,
                     kWh: items.kWh,
-                    period: .total
+                    period: .total,
+                    pkWh: items.pkWh
                 )
             }
             .sorted()
@@ -66,7 +67,8 @@ struct InfoEnergyLinesView: View {
                     InfoEnergyItem(
                         date: date,
                         kWh: periodItems.kWh,
-                        period: period
+                        period: period,
+                        pkWh: periodItems.pkWh
                     )
                 }
                 
@@ -93,5 +95,3 @@ struct InfoEnergyLinesView: View {
         periodItemsFiltered = periodItemsRanged.map({ $0.filter(model.startDate, model.endDate)})
     }
 }
-
-

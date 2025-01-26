@@ -15,4 +15,6 @@ extension Color {
         return Color(uiColor: .secondarySystemBackground)
 #endif
     }
+    
+    static let pourColor: Color = .red
 }

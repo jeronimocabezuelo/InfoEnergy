@@ -44,11 +44,12 @@ extension InfoEnergyCSVModel {
     }
 }
 
-struct InfoEnergyCSVItemModel: Codable, Equatable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod {
+struct InfoEnergyCSVItemModel: Codable, Equatable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod, InfoEnergyPKWh {
     let cups: String
     let date: Date
     let time: Int
     let kWh: Float
+    let pkWh: Float
     
     var period: Period {
         let calendar = Calendar.current
@@ -90,7 +91,14 @@ extension InfoEnergyCSVItemModel {
         else { return nil }
         self.cups = cups
         self.date = date
-        self.time = time
+        self.time = time % 24
         self.kWh = kWh
+        
+        if let pkWhString = infoRow.at(4)?.replacingOccurrences(of: ",", with: "."),
+           let pkWh = Float(pkWhString) {
+            self.pkWh = pkWh
+        } else {
+            self.pkWh = .zero
+        }
     }
 }

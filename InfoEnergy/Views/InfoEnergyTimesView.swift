@@ -15,6 +15,16 @@ struct InfoEnergyTimesView: View {
     @State var timesFiltered: [InfoEnergyTimeItem] = []
     @State private var selectedTime: Int?
     
+    var maxPkWh: Int {
+        let maxPkWh = timesFiltered.groupedByTime().map({ $1.pkWh }).max() ?? .zero
+        return Int(maxPkWh)
+    }
+    
+    var maxKWh: Int {
+        let maxKWh = timesFiltered.groupedByTime().map({ $1.kWh }).max() ?? .zero
+        return Int(maxKWh)
+    }
+    
     var body: some View {
         Chart {
             ForEach(timesFiltered, id: \.id) { item in
@@ -25,6 +35,13 @@ struct InfoEnergyTimesView: View {
                 )
                 .foregroundStyle(item.period.color)
                 .position(by: .value(.periodValue, item.period.rawValue))
+                BarMark(
+                    x: .value(.timeValue, item.time),
+                    y: .value(.pkWhValue, -item.pkWh),
+                    width: .inset(10)
+                )
+                .foregroundStyle(Color.pourColor)
+                .position(by: .value(.periodValue, Constants.pourValue))
             }
             
             if let selectedTime, selectedTime.isBetween(0, max: 24) {
@@ -60,6 +77,7 @@ struct InfoEnergyTimesView: View {
                 }
         }
         .chartXScale(domain: -1...24)
+        .chartYScale(domain: -maxPkWh...maxKWh)
         .chartXAxis {
             AxisMarks(preset: .aligned, values: .stride(by: 1)) { value in
                 if (0...23).contains(value.as(Int.self) ?? -1) {
@@ -87,7 +105,8 @@ struct InfoEnergyTimesView: View {
                                 date: date,
                                 time: time,
                                 kWh: dateItems.kWh,
-                                period: period
+                                period: period,
+                                pkWh: dateItems.pkWh
                             )
                         })
                     })

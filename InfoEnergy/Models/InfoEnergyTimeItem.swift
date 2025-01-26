@@ -7,13 +7,14 @@
 
 import Foundation
 
-struct InfoEnergyTimeItem: Identifiable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod {
+struct InfoEnergyTimeItem: Identifiable, InfoEnergyDate, InfoEnergyTime, InfoEnergyKWh, InfoEnergyPeriod, InfoEnergyPKWh {
     let id = UUID()
     
     let date: Date
     let time: Int
     let kWh: Float
     let period: Period
+    let pkWh: Float
 }
 
 extension InfoEnergyTimeItem: Comparable {

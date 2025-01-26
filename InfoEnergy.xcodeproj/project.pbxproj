@@ -41,6 +41,7 @@
 		747791A72CA70705003A4C19 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747791A62CA70702003A4C19 /* UserManager.swift */; };
 		747791AD2CA84C63003A4C19 /* DeveloperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 747791AC2CA84C63003A4C19 /* DeveloperKit */; };
 		747791BA2CA981C1003A4C19 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 747791B92CA981C1003A4C19 /* .swiftlint.yml */; };
+		74EF2D682D46734C003D4C3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EF2D672D46734C003D4C3A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		747791A32CA70252003A4C19 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		747791A62CA70702003A4C19 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		747791B92CA981C1003A4C19 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		74EF2D672D46734C003D4C3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				747791A62CA70702003A4C19 /* UserManager.swift */,
+				74EF2D672D46734C003D4C3A /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				7458C6A02C57EDEC009081BC /* InfoEnergyItem.swift in Sources */,
 				7458C6D02C63D904009081BC /* DateFormatter+Extension.swift in Sources */,
 				7458C6892C57EAA1009081BC /* InfoEnergyApp.swift in Sources */,
+				74EF2D682D46734C003D4C3A /* Constants.swift in Sources */,
 				7458C6CC2C627AF3009081BC /* InfoEnergyTimesView.swift in Sources */,
 				7477919E2C9EFC59003A4C19 /* Float+Extension.swift in Sources */,
 				747791A02CA02C27003A4C19 /* ClockView.swift in Sources */,

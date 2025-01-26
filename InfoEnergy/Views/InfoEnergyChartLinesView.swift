@@ -33,6 +33,16 @@ struct InfoEnergyChartLinesView: View {
         return startDate.addingTimeInterval(timeInterval / 2)
     }
     
+    var maxPkWh: Int {
+        let maxPkWh = totalItems.map({ $0.pkWh }).max() ?? .zero
+        return Int(maxPkWh)
+    }
+    
+    var maxKWh: Int {
+        let maxKWh = totalItems.map({ $0.kWh }).max() ?? .zero
+        return Int(maxKWh)
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             bodyChart(in: geometry)
@@ -51,6 +61,7 @@ struct InfoEnergyChartLinesView: View {
             ChartLineView(items: periodItems.at(0))
             ChartLineView(items: periodItems.at(1))
             ChartLineView(items: periodItems.at(2))
+            ChartPourLineView(items: totalItems)
 //            ChartBarsView(items: periodItems.at(0))
 //            ChartBarsView(items: periodItems.at(1))
 //            ChartBarsView(items: periodItems.at(2))
@@ -71,6 +82,7 @@ struct InfoEnergyChartLinesView: View {
                 }
             }
         }
+        .chartYScale(domain: -maxPkWh...maxKWh)
     }
     
     func dayWidth(in totalWidth: CGFloat) -> CGFloat? {
@@ -120,6 +132,24 @@ struct ChartLineView: ChartContent {
     }
 }
 
+struct ChartPourLineView: ChartContent {
+    var items: [InfoEnergyItem]?
+    
+    var body: some ChartContent {
+        ForEach(items ?? [], id: \.id) { item in
+            if item.pkWh > .zero {
+                LineMark(
+                    x: .value(.dateValue, item.date),
+                    y: .value(.pkWhValue, -item.pkWh),
+                    series: .value(.periodValue, Constants.pourValue)
+                )
+                .position(by: .value(.periodValue, Constants.pourValue))
+                .foregroundStyle(Color.pourColor)
+            }
+        }
+    }
+}
+
 struct ChartBarsView: ChartContent {
     var items: [InfoEnergyItem]?
     
@@ -131,6 +161,21 @@ struct ChartBarsView: ChartContent {
             )
             .foregroundStyle(item.period.color)
             .position(by: .value(.periodValue, item.period.rawValue))
+        }
+    }
+}
+
+struct ChartPourBarsView: ChartContent {
+    var items: [InfoEnergyItem]?
+    
+    var body: some ChartContent {
+        ForEach(items ?? [], id: \.id) { item in
+            BarMark(
+                x: .value(.dateValue, item.date),
+                y: .value(.pkWhValue, -item.pkWh)
+            )
+            .foregroundStyle(Color.pourColor)
+            .position(by: .value(.periodValue, Constants.pourValue))
         }
     }
 }

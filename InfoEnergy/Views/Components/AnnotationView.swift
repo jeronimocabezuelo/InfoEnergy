@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GenericAnnotationView<Item: InfoEnergyPeriod & InfoEnergyKWh>: View {
+struct GenericAnnotationView<Item: InfoEnergyPeriod & InfoEnergyKWh & InfoEnergyPKWh>: View {
     let title: any StringProtocol
     let items: [Item]
     
@@ -20,6 +20,7 @@ struct GenericAnnotationView<Item: InfoEnergyPeriod & InfoEnergyKWh>: View {
             Text("Llano: \(items.filter({$0.period == .flat}).kWh.toDecimalString())")
             Text("Punta: \(items.filter({$0.period == .point}).kWh.toDecimalString())")
             Text("Total: \(items.kWh.toDecimalString())")
+            Text("Vertido: \(items.pkWh.toDecimalString())")
         }
         .padding()
         .background(Color.annotationBackground.opacity(0.8))

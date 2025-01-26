@@ -14,6 +14,7 @@ extension LocalizedStringKey {
     static var total: Self { "Total" }
     static var dateValue: Self = "Date"
     static var kWhValue: Self = "kWh"
+    static var pkWhValue: Self = "pkWh"
     static var periodValue: Self = "period"
     static var timeValue: Self = "time"
 }

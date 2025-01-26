@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct InfoEnergyItem: Identifiable, InfoEnergyDate, InfoEnergyKWh, InfoEnergyPeriod {
+struct InfoEnergyItem: Identifiable, InfoEnergyDate, InfoEnergyKWh, InfoEnergyPeriod, InfoEnergyPKWh {
     let id = UUID()
     
     let date: Date
     let kWh: Float
     let period: Period
+    let pkWh: Float
 }
 
 extension InfoEnergyItem: Comparable {
@@ -33,7 +34,8 @@ extension Array where Element == InfoEnergyItem {
                 return InfoEnergyItem(
                     date: date,
                     kWh: items.kWh,
-                    period: .total
+                    period: .total,
+                    pkWh: items.pkWh
                 )
             }
             .sorted()
@@ -48,7 +50,8 @@ extension Array where Element == InfoEnergyItem {
             let rangedItem = InfoEnergyItem(
                 date: item.date,
                 kWh: rangedItems.kWh,
-                period: item.period
+                period: item.period,
+                pkWh: rangedItems.pkWh
             )
             
             result.append(rangedItem)

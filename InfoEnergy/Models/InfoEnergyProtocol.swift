@@ -50,3 +50,13 @@ extension Array where Element: InfoEnergyKWh {
         map({ $0.kWh }).sum()
     }
 }
+
+protocol InfoEnergyPKWh {
+    var pkWh: Float { get }
+}
+
+extension Array where Element: InfoEnergyPKWh {
+    var pkWh: Float {
+        map({ $0.pkWh }).sum()
+    }
+}
