@@ -68,10 +68,18 @@ struct InfoEnergyCSVItemModel: Codable, Equatable, InfoEnergyDate, InfoEnergyTim
 extension InfoEnergyCSVItemModel {
     init?(documentRow: String) {
         var documentRow = documentRow
-        documentRow.removeFirst()
-        documentRow.removeLast()
+        guard !documentRow.isEmpty else { return nil }
         
-        let infoRow = documentRow.components(separatedBy: "\",\"")
+        let infoRow: [String]
+        
+        if documentRow.contains(";") {
+            infoRow = documentRow.components(separatedBy: ";")
+        } else {
+            documentRow.removeFirst()
+            documentRow.removeLast()
+            
+            infoRow = documentRow.components(separatedBy: "\",\"")
+        }
         guard let cups = infoRow.at(0),
               let dateString = infoRow.at(1),
               let timeString = infoRow.at(2),
