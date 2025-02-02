@@ -10,6 +10,7 @@ import DeveloperKit
 
 public enum UserDefaultKey: String {
     case saveCVSModel
+    case saveInvoces
 }
 
 class UserManager {
@@ -19,4 +20,7 @@ class UserManager {
         
     @UserDefaultData(key: UserDefaultKey.saveCVSModel)
     var saveCVSModel: InfoEnergyCSVModel?
+    
+    @UserDefaultData(key: UserDefaultKey.saveInvoces)
+    var saveInvoces: [InvoceData]?
 }

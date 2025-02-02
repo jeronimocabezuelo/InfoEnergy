@@ -42,6 +42,9 @@
 		747791AD2CA84C63003A4C19 /* DeveloperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 747791AC2CA84C63003A4C19 /* DeveloperKit */; };
 		747791BA2CA981C1003A4C19 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 747791B92CA981C1003A4C19 /* .swiftlint.yml */; };
 		74EF2D682D46734C003D4C3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EF2D672D46734C003D4C3A /* Constants.swift */; };
+		74EF2D6A2D496D83003D4C3A /* InvoceImporterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EF2D692D496D83003D4C3A /* InvoceImporterButtonView.swift */; };
+		74EF2D6C2D4AAC65003D4C3A /* InfoEnergyInvocesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EF2D6B2D4AAC65003D4C3A /* InfoEnergyInvocesView.swift */; };
+		74EF2D6E2D4D459C003D4C3A /* InvoceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EF2D6D2D4D459C003D4C3A /* InvoceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,9 @@
 		747791A62CA70702003A4C19 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		747791B92CA981C1003A4C19 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		74EF2D672D46734C003D4C3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74EF2D692D496D83003D4C3A /* InvoceImporterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoceImporterButtonView.swift; sourceTree = "<group>"; };
+		74EF2D6B2D4AAC65003D4C3A /* InfoEnergyInvocesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEnergyInvocesView.swift; sourceTree = "<group>"; };
+		74EF2D6D2D4D459C003D4C3A /* InvoceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 		7458C69E2C57EDAF009081BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				74EF2D6D2D4D459C003D4C3A /* InvoceData.swift */,
 				7458C69B2C57ED9E009081BC /* Period.swift */,
 				7458C6CD2C63C975009081BC /* InfoEnergyProtocol.swift */,
 				7458C6A12C57F189009081BC /* InfoEnergyCSVModel.swift */,
@@ -175,6 +182,7 @@
 				7458C6B92C5E9C71009081BC /* InfoEnergyLinesView.swift */,
 				7458C6CB2C627AF2009081BC /* InfoEnergyTimesView.swift */,
 				7458C6972C57ED77009081BC /* InfoEnergyChartLinesView.swift */,
+				74EF2D6B2D4AAC65003D4C3A /* InfoEnergyInvocesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 		7458C6B82C5E9C09009081BC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				74EF2D692D496D83003D4C3A /* InvoceImporterButtonView.swift */,
 				747791A32CA70252003A4C19 /* AnnotationView.swift */,
 				7477919F2CA02C21003A4C19 /* ClockView.swift */,
 				7458C6BC2C5E9CC5009081BC /* FilterDateView.swift */,
@@ -286,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EF2D6E2D4D459C003D4C3A /* InvoceData.swift in Sources */,
 				7458C68B2C57EAA1009081BC /* CoffeView.swift in Sources */,
 				7477919C2C9EF898003A4C19 /* Color+Extension.swift in Sources */,
 				7458C6A02C57EDEC009081BC /* InfoEnergyItem.swift in Sources */,
@@ -294,6 +304,7 @@
 				74EF2D682D46734C003D4C3A /* Constants.swift in Sources */,
 				7458C6CC2C627AF3009081BC /* InfoEnergyTimesView.swift in Sources */,
 				7477919E2C9EFC59003A4C19 /* Float+Extension.swift in Sources */,
+				74EF2D6C2D4AAC65003D4C3A /* InfoEnergyInvocesView.swift in Sources */,
 				747791A02CA02C27003A4C19 /* ClockView.swift in Sources */,
 				7458C6B62C5933F7009081BC /* Int+Extension.swift in Sources */,
 				7458C6AC2C5801B1009081BC /* Array+Extension.swift in Sources */,
@@ -305,6 +316,7 @@
 				7458C6C22C615875009081BC /* LocalizedStringKeys.swift in Sources */,
 				7458C6A82C57FBB3009081BC /* ImportButton.swift in Sources */,
 				747791A22CA07440003A4C19 /* HoverView.swift in Sources */,
+				74EF2D6A2D496D83003D4C3A /* InvoceImporterButtonView.swift in Sources */,
 				747791A72CA70705003A4C19 /* UserManager.swift in Sources */,
 				747791A42CA70258003A4C19 /* AnnotationView.swift in Sources */,
 				7458C6C82C627A19009081BC /* InfoEnergyTimeItem.swift in Sources */,

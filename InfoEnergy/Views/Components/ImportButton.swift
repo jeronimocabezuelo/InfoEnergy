@@ -7,6 +7,8 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import PDFKit
+import DeveloperKit
 
 struct InputDocument: Equatable {
     var input: String

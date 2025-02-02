@@ -27,6 +27,10 @@ enum Period: Int, CaseIterable {
         }
     }
     
+    var generationColor: Color {
+        return color.opacity(0.5)
+    }
+    
     var title: LocalizedStringKey {
         switch self {
         case .valley: return .valley

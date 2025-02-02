@@ -7,6 +7,13 @@
 
 import Foundation
 
+extension CGFloat {
+    init?(truncating: NSNumber?) {
+        guard let truncating else { return nil }
+        self.init(truncating: truncating)
+    }
+}
+
 extension Float {
 
 }

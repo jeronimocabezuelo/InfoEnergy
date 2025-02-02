@@ -30,6 +30,8 @@ struct InfoEnergyMainView: View {
                 InfoEnergyLinesView(model: model)
                 Spacer(minLength: 16)
                 InfoEnergyTimesView(model: model)
+                Spacer(minLength: 16)
+                InfoEnergyInvocesView()
             }
             .padding(16)
             
