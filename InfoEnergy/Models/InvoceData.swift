@@ -37,6 +37,18 @@ struct InvoceData: Codable, Identifiable {
     var period: DateRange? {
         return DateRange(start: start, end: end)
     }
+    
+    var savings: CGFloat {
+        zip(energy, energyGeneration).reduce(0) { result, pair in
+            result + InvoceData.savings(energy: pair.0, generation: pair.1)
+        }
+    }
+    
+    static func savings(energy: InvoceItemData, generation: InvoceItemData) -> CGFloat {
+        let hipoteticallyGenerationTotal = generation.valleyUse * energy.valleyPrice + generation.flatUse * energy.flatPrice + generation.pointUse * energy.pointPrice
+        
+        return hipoteticallyGenerationTotal - generation.total
+    }
 }
 
 extension Array where Element == InvoceItemData {
