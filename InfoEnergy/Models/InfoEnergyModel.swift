@@ -15,6 +15,10 @@ class InfoEnergyModel: ObservableObject {
     @Published private(set) var rawDataModel: InfoEnergyCSVModel = .mock
     @Published var hoveredPeriod: Period?
     
+    @Published var showLines: Bool = true
+    @Published var showBars: Bool = true
+    @Published var showInvoces: Bool = false
+    
     func update(with model: InfoEnergyCSVModel?) {
         let model = model ?? .mock
         

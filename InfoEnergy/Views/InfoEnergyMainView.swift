@@ -32,12 +32,32 @@ struct InfoEnergyMainView: View {
                 }
                 
                 Legend(hoveredPeriod: $model.hoveredPeriod)
-                
-                InfoEnergyLinesView(model: model)
-                Spacer(minLength: 16)
-                InfoEnergyTimesView(model: model)
-                Spacer(minLength: 16)
-                InfoEnergyInvocesView()
+                VStack(alignment: .leading) {
+                    Button {
+                        model.showLines.toggle()
+                    } label: {
+                        Text("Lines \(model.showLines ? "🔼" : "🔽")")
+                    }
+                    if model.showLines { InfoEnergyLinesView(model: model) }
+                    
+                    Spacer(minLength: 16)
+                    
+                    Button {
+                        model.showBars.toggle()
+                    } label: {
+                        Text("Bars \(model.showBars ? "🔼" : "🔽")")
+                    }
+                    if model.showBars { InfoEnergyTimesView(model: model) }
+                    
+                    Spacer(minLength: 16)
+                    
+                    Button {
+                        model.showInvoces.toggle()
+                    } label: {
+                        Text("Invoces \(model.showInvoces ? "🔼" : "🔽")")
+                    }
+                    if model.showInvoces { InfoEnergyInvocesView() }
+                }
             }
             .padding(16)
             
