@@ -15,7 +15,9 @@ class InfoEnergyModel: ObservableObject {
     @Published private(set) var rawDataModel: InfoEnergyCSVModel = .mock
     @Published var hoveredPeriod: Period?
     
-    func update(with model: InfoEnergyCSVModel) {
+    func update(with model: InfoEnergyCSVModel?) {
+        let model = model ?? .mock
+        
         rawDataModel = model
         startDate = model.items.first?.date ?? .now
         endDate = model.items.last?.date ?? .now

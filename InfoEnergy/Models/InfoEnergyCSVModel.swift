@@ -6,9 +6,20 @@
 //
 
 import Foundation
+import DeveloperKit
 
 struct InfoEnergyCSVModel: Codable {
-    let items: [InfoEnergyCSVItemModel]
+    var items: [InfoEnergyCSVItemModel]
+    
+    mutating func update(with model: InfoEnergyCSVModel) {
+        model.items.forEach({ item in
+            if let previousItemIndex = self.items.firstIndex(where: { $0.date == item.date && $0.time == item.time }) {
+                self.items.setAt(previousItemIndex, item)
+            } else {
+                self.items.append(item)
+            }
+        })
+    }
 }
 
 extension InfoEnergyCSVModel: Equatable {

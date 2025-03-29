@@ -23,6 +23,12 @@ struct InfoEnergyMainView: View {
                         in: 1...1000
                     )
                     ImportButton(onLoadDocument: onLoadDocument)
+                    Button {
+                        UserManager.shared.saveCVSModel = nil
+                        model.update(with: nil)
+                    } label: {
+                        Text("Reset")
+                    }
                 }
                 
                 Legend(hoveredPeriod: $model.hoveredPeriod)
@@ -40,7 +46,7 @@ struct InfoEnergyMainView: View {
             }
         }
         .onAppear {
-            guard let storedModel = UserManager.shared.saveCVSModel else { return }
+            let storedModel = UserManager.shared.saveCVSModel 
             model.update(with: storedModel)
         }
     }
@@ -48,9 +54,15 @@ struct InfoEnergyMainView: View {
     func onLoadDocument(_ newDocument: String) {
         let csvModel = InfoEnergyCSVModel(document: newDocument)
         
-        UserManager.shared.saveCVSModel = csvModel
-        
-        self.model.update(with: csvModel)
+        if var savedCSVModel = UserManager.shared.saveCVSModel {
+            savedCSVModel.update(with: csvModel)
+            UserManager.shared.saveCVSModel = savedCSVModel
+            self.model.update(with: savedCSVModel)
+        } else {
+            UserManager.shared.saveCVSModel = csvModel
+            
+            self.model.update(with: csvModel)
+        }
     }
 }
 
