@@ -58,7 +58,7 @@ struct InfoEnergyInvoceChart: View {
     }
     
     var maxKWh: Int {
-        let maxKWh = invoces.map({ $0.use }).max() ?? .zero
+        let maxKWh = invoces.compactMap({ [$0.valleyUse, $0.flatUse, $0.pointUse].max() }).max() ?? .zero
         return Int(maxKWh)
     }
     

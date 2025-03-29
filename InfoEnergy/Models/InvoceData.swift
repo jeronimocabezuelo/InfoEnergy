@@ -20,6 +20,10 @@ struct InvoceData: Codable, Identifiable {
     
     var use: CGFloat { energy.use + energyGeneration.use }
     
+    var valleyUse: CGFloat { energy.valleyUse + energyGeneration.valleyUse }
+    var flatUse: CGFloat { energy.flatUse + energyGeneration.flatUse }
+    var pointUse: CGFloat { energy.pointUse + energyGeneration.pointUse }
+    
     var total: CGFloat { energyTotal + energyGenerationTotal }
     
     var start: Date? {
