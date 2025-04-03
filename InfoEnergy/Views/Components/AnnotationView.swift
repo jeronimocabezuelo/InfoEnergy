@@ -76,7 +76,7 @@ struct InvoceAnnotationView: View {
                     Text("Llano: \(invoice.energyGeneration.flatUse.toDecimalString())")
                     Text("Punta: \(invoice.energyGeneration.pointUse.toDecimalString())")
                     Text("GenerationkWhTotal: \(invoice.energyGeneration.use.toDecimalString())")
-                    Text("Ahorro con GenerationkWh: \(invoice.savings.toDecimalString())")
+                    Text("Ahorro con GenerationkWh: \(invoice.savings.toDecimalString())€")
                 }
                 Divider()
             }
