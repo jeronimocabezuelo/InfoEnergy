@@ -9,12 +9,13 @@ import SwiftUI
 import Charts
 
 struct InfoEnergyInvocesView: View {
+    @ObservedObject var model: InfoEnergyModel
     @State var invoces: [InvoceData] = []
     
     var body: some View {
         VStack {
             InvoceImporterButtonView(onLoadInvoce: onLoadInvoce)
-            InfoEnergyInvoceChart(invoces: invoces)
+            InfoEnergyInvoceChart(invoces: invoces, dataModel: model.rawDataModel)
         }
         .onAppear {
             print("onAppear \(Self.self)")
@@ -40,6 +41,7 @@ struct InfoEnergyInvocesView: View {
 
 struct InfoEnergyInvoceChart: View {
     let invoces: [InvoceData]
+    let dataModel: InfoEnergyCSVModel
     
     @State var selectedInvoceXValue: String?
     
@@ -129,7 +131,9 @@ struct InfoEnergyInvoceChart: View {
                     alignment: .center,
                     spacing: 0
                 ) {
-                    InvoceAnnotationView(invoice: selectedInvoce)
+                    let items = dataModel.items.filter(selectedInvoce.start, selectedInvoce.end)
+                    
+                    InvoceAnnotationView(invoice: selectedInvoce, energyItems: items)
                 }
             }
         }

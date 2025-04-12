@@ -56,7 +56,9 @@ struct InfoEnergyMainView: View {
                     } label: {
                         Text("Invoces \(model.showInvoces ? "🔼" : "🔽")")
                     }
-                    if model.showInvoces { InfoEnergyInvocesView() }
+                    if model.showInvoces {
+                        InfoEnergyInvocesView(model: model)
+                    }
                 }
             }
             .padding(16)

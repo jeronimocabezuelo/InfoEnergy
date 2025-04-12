@@ -16,7 +16,7 @@ extension Array where Element: InfoEnergyDate {
         grouped(by: { $0.date })
     }
     
-    func filter(_ startDate: Date, _ endDate: Date) -> Self {
+    func filter(_ startDate: Date?, _ endDate: Date?) -> Self {
         filter({ $0.date.isBetween(startDate, endDate) })
     }
 }

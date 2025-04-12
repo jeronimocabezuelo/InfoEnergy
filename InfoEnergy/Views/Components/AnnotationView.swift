@@ -53,6 +53,8 @@ struct LinesAnnotationView: View {
 
 struct InvoceAnnotationView: View {
     let invoice: InvoceData
+    let energyItems: [InfoEnergyCSVItemModel]
+    var comparator: Bool = true
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -77,10 +79,31 @@ struct InvoceAnnotationView: View {
                     Text("Punta: \(invoice.energyGeneration.pointUse.toDecimalString())")
                     Text("GenerationkWhTotal: \(invoice.energyGeneration.use.toDecimalString())")
                     Text("Ahorro con GenerationkWh: \(invoice.savings.toDecimalString())€")
+                    
+                    Divider()
                 }
-                Divider()
             }
             Text("Total: \(invoice.use.toDecimalString())")
+            
+            if comparator {
+                Divider()
+                
+                Text("Comparativa con infoEnergy")
+                
+                let periods = energyItems
+                    .groupedByPeriod()
+                    .map( {($0.0, $0.1.kWh )})
+                    .toDictionary()
+                let valley = invoice.valleyUse - CGFloat(periods[.valley] ?? .zero)
+                let flat = invoice.flatUse - CGFloat(periods[.flat] ?? .zero)
+                let point = invoice.pointUse - CGFloat(periods[.point] ?? .zero)
+                let total = valley + flat + point
+                
+                Text("Valle: \(valley.toDecimalString())")
+                Text("Llano: \(flat.toDecimalString())")
+                Text("Punta: \(point.toDecimalString())")
+                Text("Total: \(total.toDecimalString())")
+            }
         }
         .padding()
         .background(Color.annotationBackground.opacity(0.8))
